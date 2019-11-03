@@ -1,20 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link'
+import TweenOne from 'rc-tween-one';
 
 function ExpandingCard(props) {
+  const [animate, setAnimate] = useState(false);
+  function handleMouseOver() {
+    setAnimate(true);
+  }
+  function handleMouseOut() {
+    setAnimate(false);
+  }
   return (
     <>
-      <Link href={props.href}>
-        <div className="card" >
-          <h3 className="title">
-            {props.title}
-          </h3>
-          <div className="content">
-            {props.children}
+      <TweenOne
+        reverse={!animate}
+        animation={{
+          duration: 500,
+          scale: 1.5,
+        }}
+      >
+        <Link href={props.href}>
+          <div className="card" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
+            <h3 className="title">
+              {props.title}
+            </h3>
+
+            <div className="content">
+              {props.children}
+            </div>
           </div>
-          <p></p>
-        </div>
-      </Link>
+        </Link>
+      </TweenOne>
       <style jsx>{`
     .card {
         padding: 18px 18px 24px;
@@ -25,6 +41,7 @@ function ExpandingCard(props) {
         color: #434343;
         border: 1px solid #9b9b9b;
         cursor: pointer;
+        background: white;
       }
       .card:hover {
         border-color: #067df7;

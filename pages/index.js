@@ -2,6 +2,9 @@ import React from 'react'
 import Head from 'next/head'
 import Nav from '../components/nav'
 import ExpandingCard from '../components/ExpandingCard'
+import TextyAnim from 'rc-texty'
+import 'rc-texty/assets/index.css';
+
 
 const Home = () => (
   <div>
@@ -13,9 +16,13 @@ const Home = () => (
     <Nav />
 
     <div className='hero'>
-      <h1 className='title'>Développeur web freelance</h1>
+      <h1 className='title'>
+        <TextyAnim type="right" mode="sync">Développeur web freelance</TextyAnim>
+      </h1>
       <p className='description'>
-        Développement front et back, intégration continue et plugins CMS
+        <TextyAnim type="right" mode="sync" delay={450}>
+          Développement front et back, intégration continue et plugins CMS
+        </TextyAnim>
       </p>
 
       <div className='row'>
