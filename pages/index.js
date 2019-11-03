@@ -6,42 +6,29 @@ import ExpandingCard from '../components/ExpandingCard'
 const Home = () => (
   <div>
     <Head>
-      <title>Home</title>
+      <title>Paul Laborderie - Accueil</title>
       <link rel='icon' href='/favicon.ico' />
     </Head>
 
     <Nav />
 
     <div className='hero'>
-      <h1 className='title'>Welcome to Next.js!</h1>
+      <h1 className='title'>Développeur web freelance</h1>
       <p className='description'>
-        To get started, edit <code>pages/index.js</code> and save to reload.
+        Développement front et back, intégration continue et plugins CMS
       </p>
 
       <div className='row'>
-        <a href='https://nextjs.org/docs' className='card'>
-          <h3>Documentation &rarr;</h3>
-          <p>Learn more about Next.js in the documentation.</p>
-        </a>
-        <a href='https://nextjs.org/learn' className='card'>
-          <h3>Next.js Learn &rarr;</h3>
-          <p>Learn about Next.js by following an interactive tutorial!</p>
-        </a>
-        <a
-          href='https://github.com/zeit/next.js/tree/master/examples'
-          className='card'
-        >
-          <h3>Examples &rarr;</h3>
-          <p>Find other example boilerplates on the Next.js GitHub.</p>
-        </a>
-        <ExpandingCard title="Hello, World!" href="/hello">
-          ajkdfbajkdsfhjoehfdkljkldsjkflsadf
-          weklfjlekwjfkjfdksaj;fksad
-          f;'wefwefqwef
-          sdf;
-          ajkdfbajkdsfhjoehfdkljkldsjkflsadfsdaf
-          sadf
-          asdf'
+        <ExpandingCard title="Mes projets &rarr;" href="/projects">
+          Découvrez mes projets afin de vous faire une idée de mes capacités.
+        </ExpandingCard>
+        <ExpandingCard title="Mes compétences &rarr;" href="/skills">
+          Les technologies, concepts et langages maîtrisés, pouvant être mis
+          à disposition de votre entreprise.
+        </ExpandingCard>
+        <ExpandingCard title="Me contacter &rarr;" href="/contact">
+          Je serais ravi de travailler avec vous ou de discuter de développement
+          et de nouvelles technologies.
         </ExpandingCard>
       </div>
     </div>
@@ -68,6 +55,13 @@ const Home = () => (
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+        flex-wrap: wrap;
+      }
+      @media screen(max-width: 536px) {
+        .row {
+          flex-direction: column;
+          align-items: space-around;
+        }
       }
       .card {
         padding: 18px 18px 24px;

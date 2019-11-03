@@ -1,9 +1,10 @@
 import React from 'react';
 import { Layout, Menu, Breadcrumb } from 'antd';
+import 'antd/dist/antd.css';
 
 const { Header, Content, Footer } = Layout;
 
-function Hello() {
+function Projects() {
   return (
     <Layout className="layout">
       <Header>
@@ -11,7 +12,7 @@ function Hello() {
         <Menu
           theme="dark"
           mode="horizontal"
-          defaultSelectedKeys={['2']}
+          defaultSelectedKeys={['1']}
           style={{ lineHeight: '64px' }}
         >
           <Menu.Item key="1">nav 1</Menu.Item>
@@ -32,4 +33,4 @@ function Hello() {
   )
 }
 
-export default Hello;
+export default Projects;

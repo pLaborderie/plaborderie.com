@@ -1,25 +1,30 @@
 import React from 'react';
+import Link from 'next/link'
 
 function ExpandingCard(props) {
   return (
     <>
-      <a className="card" href={props.href}>
-        <h3 className="title">
-          {props.title}
-        </h3>
-        <div className="content">
-          {props.children}
+      <Link href={props.href}>
+        <div className="card" >
+          <h3 className="title">
+            {props.title}
+          </h3>
+          <div className="content">
+            {props.children}
+          </div>
+          <p></p>
         </div>
-        <p></p>
-      </a>
+      </Link>
       <style jsx>{`
     .card {
         padding: 18px 18px 24px;
+        margin: 10px 0;
         width: 220px;
         text-align: left;
         text-decoration: none;
         color: #434343;
         border: 1px solid #9b9b9b;
+        cursor: pointer;
       }
       .card:hover {
         border-color: #067df7;
