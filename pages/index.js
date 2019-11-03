@@ -17,12 +17,10 @@ const Home = () => (
 
     <div className='hero'>
       <h1 className='title'>
-        <TextyAnim type="right" mode="sync">Développeur web freelance</TextyAnim>
+        <TextyAnim type="alpha" mode="smooth" duration={100}>Développeur web freelance</TextyAnim>
       </h1>
       <p className='description'>
-        <TextyAnim type="right" mode="sync" delay={450}>
-          Développement front et back, intégration continue et plugins CMS
-        </TextyAnim>
+        Développement front et back, intégration continue et plugins CMS
       </p>
 
       <div className='row'>
