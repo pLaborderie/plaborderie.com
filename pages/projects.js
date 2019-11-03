@@ -6,7 +6,7 @@ import Template from '../components/Template';
 function Projects() {
   return (
     <Template seoTitle="Projets">
-      <h3><Texty>Mes projets</Texty></h3>
+      <h3><Texty type="right" mode="smooth" duration={100}>Mes projets</Texty></h3>
     </Template>
   )
 }
