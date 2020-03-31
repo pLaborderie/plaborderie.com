@@ -10,7 +10,7 @@
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
     "antd": "^3.24.3",
-    "next": "9.1.2",
+    "next": "9.3.2",
     "rc-texty": "^0.2.0",
     "rc-tween-one": "^2.6.5",
     "react": "16.11.0",
